@@ -1,3 +1,4 @@
+import SkillSection from "@/customComponents/homeComponents/SkillSection";
 import HeroSection from "../customComponents/homeComponents/HeroSection";
 import WorkExperience from "../customComponents/homeComponents/WorkExperience";
 
@@ -6,6 +7,7 @@ const HomePage = () => {
     <div>
       <HeroSection />
       <WorkExperience />
+      <SkillSection />
     </div>
   );
 };

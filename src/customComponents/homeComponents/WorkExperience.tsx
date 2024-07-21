@@ -56,7 +56,7 @@ const WorkExperience = () => {
       companyName: "Cureskin",
       designation: "Frontend Engineer",
       startDate: "Jun 2024",
-      endDate: "Current",
+      endDate: "Present",
       workMode: "Hybrid",
       companyLogo: cureskin,
     },
@@ -69,7 +69,7 @@ const WorkExperience = () => {
         duration={2}
         delay={0.3}
         inView
-        inViewMargin="-200px"
+        inViewMargin="-100px"
       >
         <section
           id="#experience"

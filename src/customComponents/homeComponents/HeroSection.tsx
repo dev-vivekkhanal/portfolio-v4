@@ -9,7 +9,8 @@ const HeroSection = () => {
       <div className="p-5 relative z-10 text-foreground/85 w-full max-w-[80rem] mx-auto mt-16">
         <BlurFade blur={"2px"} duration={1} delay={0.3}>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter  md:text-center px-5">
-            Hi, I'm Vivek 👋
+            Hi, I'm Vivek{" "}
+            <span className="animate-handshake inline-block">👋</span>
           </h1>
         </BlurFade>
         <BlurFade blur={"2px"} duration={1.5} delay={1.5}>
@@ -32,7 +33,7 @@ const HeroSection = () => {
             </p>
             <button className="relative px-8 py-2 shadow-md  border rounded-3xl font-semibold hover:text-foreground/100 bg-foreground/10">
               <span>Explore my work ✨ </span>
-              <BorderBeam size={80} duration={5} delay={0} />
+              <BorderBeam size={75} duration={5} delay={0} />
             </button>
           </div>
         </BlurFade>

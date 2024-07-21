@@ -5,7 +5,7 @@ import HomePage from "./pages/HomePage";
 
 function App() {
   return (
-    <main className="bg-background relative min-w-[400px]">
+    <main className="bg-background relative min-w-[24rem]">
       {/* Background */}
       <Particles
         className="absolute inset-0 z-0"
