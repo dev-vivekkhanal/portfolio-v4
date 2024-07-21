@@ -4,9 +4,9 @@ import { OrbitingCircleContainer } from "./OrbitingCircleContainer";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[100dvh] relative">
+    <section className="min-h-[100dvh] relative bg-transparent">
       {/* Text Content */}
-      <div className="p-5 relative z-10 text-foreground/85 w-full max-w-[80rem] mx-auto mt-16">
+      <div className="p-5 relative z-10 text-foreground/85 w-full max-w-[80rem] mx-auto mt-16 bg-transparent">
         <BlurFade blur={"2px"} duration={1} delay={0.3}>
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter  md:text-center px-5">
             Hi, I'm Vivek{" "}
