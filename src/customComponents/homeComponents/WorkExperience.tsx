@@ -90,11 +90,6 @@ const WorkExperience = () => {
           className="p-5 py-32 max-w-[80rem] min-h-screen mx-auto  bg-transparent relative z-10"
         >
           <div className="">
-            <img
-              src={graduate}
-              alt="Vivek's graduat btmoji"
-              className="w-32 translate-y-4"
-            />
             <h2 className="text-3xl sm:text-4xl font-bold mb-20 relative z-10">
               Work Experience
             </h2>
