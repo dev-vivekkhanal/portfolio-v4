@@ -3,7 +3,7 @@ import Particles from "./components/magicui/particles";
 import DockMenu from "./customComponents/globalComponents/DockMenu";
 import HomePage from "./pages/HomePage";
 
-function App() {
+const App = () => {
   return (
     <main className="bg-background relative min-w-[24rem]">
       {/* Background */}
@@ -24,6 +24,6 @@ function App() {
       </BlurFade>
     </main>
   );
-}
+};
 
 export default App;

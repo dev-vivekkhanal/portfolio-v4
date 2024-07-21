@@ -86,7 +86,7 @@ const WorkExperience = () => {
         inViewMargin="-100px"
       >
         <section
-          id="#experience"
+          id="experience"
           className="p-5 py-32 max-w-[80rem] min-h-screen mx-auto  bg-transparent relative z-10"
         >
           <div className="">
@@ -258,7 +258,7 @@ export const EducationSection = () => {
       inViewMargin="-100px"
     >
       <section
-        id="#experience"
+        id="education"
         className="p-5 py-32 max-w-[80rem] min-h-screen mx-auto  bg-transparent relative z-10"
       >
         <div className="">

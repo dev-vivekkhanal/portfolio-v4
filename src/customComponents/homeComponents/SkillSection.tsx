@@ -221,7 +221,10 @@ const SkillSection = () => {
       inView
       inViewMargin="-100px"
     >
-      <section className="min-h-screen p-5 py-32 max-w-[80rem] mx-auto">
+      <section
+        id="skills"
+        className="min-h-screen p-5 py-32 max-w-[80rem] mx-auto"
+      >
         <h2 className="text-3xl sm:text-4xl font-bold mb-20 relative z-10">
           Technical Skills
         </h2>

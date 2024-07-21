@@ -3,10 +3,11 @@ import {
   HomeIcon,
   Code,
   GraduationCap,
-  Phone,
+  //   Phone,
   Mail,
   Linkedin,
   Github,
+  BriefcaseBusiness,
 } from "lucide-react";
 import {
   Tooltip,
@@ -17,15 +18,16 @@ import {
 import { Separator } from "../../components/ui/separator";
 import ThemeToggle from "./ThemeToggle";
 import { Button } from "../../components/ui/button";
+import { HashLink } from "react-router-hash-link";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
 const DATA = {
   navbar: [
-    { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "#", icon: Code, label: "Projects" },
-    { href: "#", icon: GraduationCap, label: "Experience" },
-    { href: "#", icon: Phone, label: "Contact" },
+    { href: "#", icon: HomeIcon, label: "Home" },
+    { href: "/#experience", icon: BriefcaseBusiness, label: "Experience" },
+    { href: "/#education", icon: GraduationCap, label: "Education" },
+    { href: "/#skills", icon: Code, label: "Skills" },
   ],
   contact: {
     social: [
@@ -53,12 +55,14 @@ const DockMenu = () => {
             <DockIcon key={item.label}>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button
-                    variant="ghost"
-                    className="rounded-full size-12 hover:bg-foreground/20"
-                  >
-                    <item.icon className="size-4" />
-                  </Button>
+                  <HashLink smooth to={item?.href}>
+                    <Button
+                      variant="ghost"
+                      className="rounded-full size-12 hover:bg-foreground/20"
+                    >
+                      <item.icon className="size-4" />
+                    </Button>
+                  </HashLink>
                 </TooltipTrigger>
                 <TooltipContent className="bg-foreground text-background">
                   <p>{item.label}</p>
