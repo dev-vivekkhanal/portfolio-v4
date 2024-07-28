@@ -223,9 +223,9 @@ const SkillSection = () => {
     >
       <section
         id="skills"
-        className="min-h-screen p-5 py-32 max-w-[80rem] mx-auto"
+        className="min-h-screen p-10 py-32 max-w-[80rem] mx-auto"
       >
-        <h2 className="text-3xl sm:text-4xl font-bold mb-20 relative z-10">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-10 relative z-10">
           Technical Skills
         </h2>
 
@@ -240,7 +240,7 @@ const SkillSection = () => {
                       <div
                         key={idx}
                         ref={skillGroup?.ref}
-                        className="relative bg-background/50 z-10 rounded-2xl p-5"
+                        className="relative bg-background/50 z-10 rounded-2xl mb-8"
                       >
                         <h3 className="mb-2 tracking-wider text-foreground/50">
                           {skillGroup?.title}
@@ -291,7 +291,7 @@ const SkillSection = () => {
                       <div
                         key={idx}
                         ref={skillGroup?.ref}
-                        className="relative bg-background/50 z-10 rounded-2xl p-5"
+                        className="relative bg-background/50 z-10 rounded-2xl mb-8"
                       >
                         <h3 className="mb-2 tracking-wider text-foreground/50">
                           {skillGroup?.title}

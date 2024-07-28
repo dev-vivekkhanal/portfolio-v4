@@ -8,7 +8,7 @@ const App = () => {
     <main className="bg-background relative min-w-[24rem]">
       {/* Background */}
       <Particles
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 hidden sm:block"
         quantity={1000}
         ease={80}
         color={"#eeeeee"}

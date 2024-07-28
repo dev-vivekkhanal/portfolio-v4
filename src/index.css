@@ -87,3 +87,26 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.project-card-bg {
+  background: rgb(0, 0, 0);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8491771708683473) 30%,
+    rgba(113, 112, 112, 0) 50%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8491771708683473) 30%,
+    rgba(113, 112, 112, 0) 50%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.8491771708683473) 30%,
+    rgba(113, 112, 112, 0) 50%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#717070",GradientType=1);
+}

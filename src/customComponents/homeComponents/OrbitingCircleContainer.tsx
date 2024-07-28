@@ -10,6 +10,7 @@ import css from "../../assets/css.png";
 import html from "../../assets/html.png";
 import bitmoji2 from "../../assets/bitmoji2.png";
 import Ripple from "../../components/magicui/ripple";
+import BlurFade from "@/components/magicui/blur-fade";
 
 export function OrbitingCircleContainer() {
   const axisData = [
@@ -83,36 +84,43 @@ export function OrbitingCircleContainer() {
     },
   ];
   return (
-    <div className="relative flex min-h-[800px]  w-full flex-col items-center justify-center overflow-hidden bg-transparent">
-      <img src={bitmoji2} alt="Vivek's bitmoji" className="w-32" />
+    <div className="relative min-h-[800px] overflow-hidden">
+      <BlurFade blur={"2px"} duration={1.5} delay={1.5}>
+        <div className="relative min-h-[800px]   flex w-full flex-col items-center justify-center overflow-hidden ">
+          <img
+            src={bitmoji2}
+            alt="Vivek's bitmoji"
+            className="w-32 animate-pop-in"
+          />
 
-      {axisData?.map((skill) => {
-        return (
-          <OrbitingCircles
-            key={skill.name}
-            className={`size-[${skill.size}] border-none bg-transparent `}
-            duration={skill.duration}
-            delay={skill.delay}
-            radius={skill.radius}
-            reverse={skill.reverse}
-            path={false}
-          >
-            <div
-              style={{ width: skill.size }}
-              className="aspect-square flex justify-center items-center  animate-pop-in"
-            >
-              <img
-                src={skill.image}
-                alt=""
-                className="w-full"
-                title={skill.name}
-              />
-            </div>
-          </OrbitingCircles>
-        );
-      })}
-
-      <Ripple mainCircleSize={170} mainCircleOpacity={0.18} numCircles={4} />
+          {axisData?.map((skill) => {
+            return (
+              <OrbitingCircles
+                key={skill.name}
+                className={`size-[${skill.size}] border-none `}
+                duration={skill.duration}
+                delay={skill.delay}
+                radius={skill.radius}
+                reverse={skill.reverse}
+                path={false}
+              >
+                <div
+                  style={{ width: skill.size }}
+                  className="aspect-square flex justify-center items-center  animate-pop-in"
+                >
+                  <img
+                    src={skill.image}
+                    alt=""
+                    className="w-full"
+                    title={skill.name}
+                  />
+                </div>
+              </OrbitingCircles>
+            );
+          })}
+        </div>
+      </BlurFade>
+      <Ripple mainCircleSize={170} mainCircleOpacity={0.18} numCircles={5} />
     </div>
   );
 }

@@ -50,17 +50,17 @@ const DockMenu = () => {
   return (
     <div className="relative w-fit mx-auto">
       <TooltipProvider>
-        <Dock direction="middle" className="bg-foreground/10">
+        <Dock direction="middle" className="bg-foreground/25">
           {DATA.navbar.map((item) => (
-            <DockIcon key={item.label}>
+            <DockIcon key={item.label} className="mx-3">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <HashLink smooth to={item?.href}>
                     <Button
                       variant="ghost"
-                      className="rounded-full size-12 hover:bg-foreground/20"
+                      className="rounded-full size-14 hover:bg-foreground/20"
                     >
-                      <item.icon className="size-4" />
+                      <item.icon className="size-8" />
                     </Button>
                   </HashLink>
                 </TooltipTrigger>
@@ -75,15 +75,15 @@ const DockMenu = () => {
             className="h-full bg-foreground/20 hidden sm:block"
           />
           {DATA.contact.social.map((item) => (
-            <DockIcon key={item.label} className="hidden sm:block">
+            <DockIcon key={item.label} className="hidden sm:block mx-3">
               <Tooltip>
                 <TooltipTrigger asChild>
                   <a href={item.href} target="_blank" rel="noopener noreferrer">
                     <Button
                       variant="ghost"
-                      className="rounded-full size-12 hover:bg-foreground/20"
+                      className="rounded-full size-14 hover:bg-foreground/20"
                     >
-                      <item.icon className="size-4" />
+                      <item.icon className="size-8" />
                     </Button>
                   </a>
                 </TooltipTrigger>
@@ -102,7 +102,7 @@ const DockMenu = () => {
               <TooltipTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="rounded-full size-8  hover:bg-foreground/20"
+                  className="rounded-full size-12  hover:bg-foreground/20"
                 >
                   <ThemeToggle />
                 </Button>

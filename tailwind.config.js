@@ -17,6 +17,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "image-dark": "url('src/assets/particlesBg.png')",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -145,8 +148,8 @@ module.exports = {
         orbit: "orbit calc(var(--duration)*1s) linear infinite",
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         ripple:
-          "ripple var(--duration, 2s) ease calc(var(--i, 0) * .2s) 1 forwards",
-        "pop-in": "popIn 2s ease-in-out 1.5s forwards",
+          "ripple var(--duration, 1s) ease calc(var(--i, 0) * .1s) 1 forwards",
+        "pop-in": "popIn 2s ease-in-out 1s forwards",
         "fade-in": "fadeIn 6s ease-out forwards",
         handshake: "handshake 1s ease-out 0.8s",
       },
