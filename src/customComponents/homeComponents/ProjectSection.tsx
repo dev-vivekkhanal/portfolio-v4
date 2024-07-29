@@ -157,8 +157,7 @@ const ProjectSection = () => {
                 layoutId={`card-${card.name}-${id}`}
                 key={card.name}
                 onClick={() => setActive(card)}
-                className=" border-2 border-accent-foreground/10 flex flex-col bg-neutral-950  rounded-xl cursor-pointer overflow-hidden
-                hover:border-accent-foreground/30
+                className=" border-2 border-accent-foreground/10 flex flex-col bg-neutral-950  rounded-xl cursor-pointer overflow-hidden group
                 "
               >
                 <div className="w-full">
@@ -169,18 +168,18 @@ const ProjectSection = () => {
                     <img
                       src={card.cover}
                       alt={card.name}
-                      className={`h-72 w-full  overflow-hidden group relative object-cover object-top rounded-xl`}
+                      className={`h-72 w-full  overflow-hidden group relative object-cover object-top group-hover:scale-105 transition-all duration-500 rounded-xl`}
                     />
                     <div className="project-card-bg absolute inset-0 p-5 border flex flex-col justify-end">
                       <motion.h3
                         layoutId={`name-${card.name}-${id}`}
-                        className="font-medium text-neutral-200 text-xl uppercase mb-2"
+                        className="font-medium text-neutral-200 text-xl uppercase mb-2 "
                       >
                         {card.name}
                       </motion.h3>
                       <motion.p
                         layoutId={`description-${card.name}-${id}`}
-                        className="text-neutral-400 text-sm"
+                        className="text-neutral-400 text-sm "
                       >
                         {card.stackUsed.toString()}
                       </motion.p>
