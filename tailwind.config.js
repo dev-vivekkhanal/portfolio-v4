@@ -18,7 +18,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        "image-dark": "url('src/assets/particlesBg.png')",
+        "image-dark": "url('/particlesBg.png')",
       },
       colors: {
         border: "hsl(var(--border))",

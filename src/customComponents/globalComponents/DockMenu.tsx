@@ -25,9 +25,9 @@ export type IconProps = React.HTMLAttributes<SVGElement>;
 const DATA = {
   navbar: [
     { href: "#", icon: HomeIcon, label: "Home" },
+    { href: "/#projects", icon: Code, label: "Projects" },
     { href: "/#experience", icon: BriefcaseBusiness, label: "Experience" },
     { href: "/#education", icon: GraduationCap, label: "Education" },
-    { href: "/#skills", icon: Code, label: "Skills" },
   ],
   contact: {
     social: [

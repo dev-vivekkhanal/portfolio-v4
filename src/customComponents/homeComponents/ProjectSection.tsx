@@ -8,6 +8,7 @@ import eko from "../../assets/eko-full.webp";
 import mag from "../../assets/mag-full.webp";
 import taswin from "../../assets/taswin-full.webp";
 import sriakriti from "../../assets/srikakriti-full.webp";
+import colorPalette from "../../assets/color-palette.png";
 
 const ProjectSection = () => {
   const [active, setActive] = useState<
@@ -305,5 +306,20 @@ const projectData = [
     ],
     desc: "Developed an elegant and captivating website for a company dedicated to crafting everlasting impressions by catering to all weddings and events needs. The site showcases their commitment to creating exceptional projects that refine intimate moments and grand occasions into lasting treasures, adhering to global excellence standards and focusing on elegance, class, and beauty.",
     cover: mag,
+  },
+
+  {
+    name: "Palettes",
+    link: "https://color-palette-generator-devvivekkhanals-projects.vercel.app/",
+    stackUsed: [
+      "HTML ",
+      " CSS ",
+      " JavaScript ",
+      " Tailwind CSS ",
+      " React JS ",
+      " Vercel ",
+    ],
+    desc: "Created a responsive web tool named Palettes, designed for generating color palettes from a single base color. The site includes features to set base and palette color formats (RGB, HEX, HSL), choose the number of colors (2 to 20), and export palettes as JSON, PDF, or image. Users can easily copy individual color codes with a click.",
+    cover: colorPalette,
   },
 ];
