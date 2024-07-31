@@ -148,7 +148,7 @@ const ProjectSection = () => {
           id="projects"
           className="min-h-screen p-10 py-32 max-w-[90rem] mx-auto"
         >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-10  z-10">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-16  z-10">
             Projects
           </h2>
           <ul className=" mx-auto w-full grid grid-cols-1 sm:grid-cols-2 items-start gap-4">

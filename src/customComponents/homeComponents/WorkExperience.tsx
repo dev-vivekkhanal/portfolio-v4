@@ -90,7 +90,7 @@ const WorkExperience = () => {
           className="p-10 py-32 max-w-[80rem] mx-auto  bg-transparent relative z-10"
         >
           <div className="">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-10 relative z-10">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10">
               Work Experience
             </h2>
           </div>
@@ -267,7 +267,7 @@ export const EducationSection = () => {
             alt="Vivek's graduat btmoji"
             className="w-32 translate-y-4"
           />
-          <h2 className="text-3xl sm:text-4xl font-bold mb-10 relative z-10">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10">
             Education
           </h2>
         </div>
