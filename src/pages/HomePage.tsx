@@ -15,12 +15,12 @@ const HomePage = () => {
       <ProjectSection />
       <SkillSection />
       <WorkExperience />
-      {/* <TextRevealByWord text="I'm passionate about creating innovative web solutions. Bringing my creative visions to life with clean, efficient and scalable code." /> */}
       <EducationSection />
       <TextRevealByWord text="Got a project in mind?💡" />
       <TextRevealByWord text="Don&#39;t be shy, say Hi!👋 Let's bring your ideas to life." />
       <ContactSection />
       <Footer />
+      {/* <TextRevealByWord text="I'm passionate about creating innovative web solutions. Bringing my creative visions to life with clean, efficient and scalable code." /> */}
     </div>
   );
 };

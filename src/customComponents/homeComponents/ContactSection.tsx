@@ -34,9 +34,9 @@ const ContactSection = () => {
     >
       <section
         id="contact"
-        className="px-10 pb-64 max-w-[80rem] min-h-fit  mx-auto  bg-transparent relative z-10 flex flex-wrap gap-10 justify-between items-center"
+        className="px-10 pb-96 max-w-[80rem] min-h-fit  mx-auto  bg-transparent relative z-10 flex flex-wrap gap-10 justify-between items-center"
       >
-        <div className="w-[120px] md:flex-1 md:max-w-[300px]">
+        <div className="w-[120px] md:flex-1 md:max-w-[220px]">
           <a
             href="https://www.linkedin.com/in/vivek-khanal/"
             target="_blank"
@@ -64,7 +64,7 @@ const ContactSection = () => {
           </p>
         </div>
 
-        <div className="w-[120px] md:flex-1 md:max-w-[300px]">
+        <div className="w-[120px] md:flex-1 md:max-w-[220px]">
           <button onClick={handleCopyAndNotify}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -83,11 +83,11 @@ const ContactSection = () => {
           </button>
 
           <p className="text-2xl text-center text-foreground/75 dark:text-foreground/30">
-            Get my email id
+            Get my email
           </p>
         </div>
 
-        <div className="w-[120px] md:flex-1 md:max-w-[300px]">
+        <div className="w-[120px] md:flex-1 md:max-w-[220px]">
           <a
             href="mailto:dev.vivekkhanal@gmail.com"
             target="_blank"
@@ -110,7 +110,7 @@ const ContactSection = () => {
             </svg>
           </a>
           <p className="text-2xl text-center text-foreground/75 dark:text-foreground/30">
-            Open your email app
+            Open email app
           </p>
         </div>
       </section>

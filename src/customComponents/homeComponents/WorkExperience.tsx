@@ -87,7 +87,7 @@ const WorkExperience = () => {
       >
         <section
           id="experience"
-          className="p-10 py-32 max-w-[80rem] min-h-screen mx-auto  bg-transparent relative z-10"
+          className="p-10 py-32 max-w-[80rem] mx-auto  bg-transparent relative z-10"
         >
           <div className="">
             <h2 className="text-3xl sm:text-4xl font-bold mb-10 relative z-10">
@@ -259,7 +259,7 @@ export const EducationSection = () => {
     >
       <section
         id="education"
-        className="p-10 py-32 max-w-[80rem] min-h-screen mx-auto  bg-transparent relative z-10"
+        className="p-10 py-32 max-w-[80rem] mx-auto  bg-transparent relative z-10"
       >
         <div className="">
           <img
