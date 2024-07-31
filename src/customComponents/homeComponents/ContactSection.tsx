@@ -1,5 +1,4 @@
 import BlurFade from "@/components/magicui/blur-fade";
-import { CoolMode } from "@/components/magicui/cool-mode";
 import { useToast } from "@/components/ui/use-toast";
 
 const ContactSection = () => {
@@ -66,24 +65,22 @@ const ContactSection = () => {
         </div>
 
         <div className="w-[120px] md:flex-1 md:max-w-[300px]">
-          <CoolMode>
-            <button onClick={handleCopyAndNotify}>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="100%"
-                height="100%"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                className="lucide lucide-at-sign stroke-foreground opacity-80 dark:opacity-50 dark:hover:opacity-90 active:scale-95 transition-all"
-              >
-                <circle cx="12" cy="12" r="4" />
-                <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
-              </svg>
-            </button>
-          </CoolMode>
+          <button onClick={handleCopyAndNotify}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="100%"
+              height="100%"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              className="lucide lucide-at-sign stroke-foreground opacity-80 dark:opacity-50 dark:hover:opacity-90 active:scale-95 transition-all"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <path d="M16 8v5a3 3 0 0 0 6 0v-1a10 10 0 1 0-4 8" />
+            </svg>
+          </button>
 
           <p className="text-2xl text-center text-foreground/75 dark:text-foreground/30">
             Get my email id
