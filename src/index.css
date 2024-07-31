@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -68,24 +69,42 @@
   }
 }
 
-/* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #1a1a1a80;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background: #42424280;
+  border-radius: 6px;
+  transition: all 5s ease-in-out;
+  cursor: grab;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: linear-gradient(270deg, #ffaa40, #9c40ff);
+  background-size: 100% 100%;
+}
+
+::-webkit-scrollbar-thumb:active {
+  cursor: grabbing;
+}
+
+.font-pacifico {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gradient-text {
+  background: linear-gradient(45deg, #ffaa40, #9c40ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent; /* Ensure fallback color is transparent */
 }
 
 .project-card-bg {

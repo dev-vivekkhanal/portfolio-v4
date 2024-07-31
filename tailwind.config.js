@@ -108,7 +108,7 @@ module.exports = {
             transform: "scale(0)",
             opacity: 0,
           },
-          "80%": {
+          "70%": {
             transform: "scale(0)",
             opacity: 0,
           },
@@ -149,7 +149,7 @@ module.exports = {
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         ripple:
           "ripple var(--duration, 1s) ease calc(var(--i, 0) * .1s) 1 forwards",
-        "pop-in": "popIn 2s ease-in-out 1s forwards",
+        "pop-in": "popIn 0.8s ease-in-out 0.5s forwards",
         "fade-in": "fadeIn 6s ease-out forwards",
         handshake: "handshake 1s ease-out 0.8s",
       },

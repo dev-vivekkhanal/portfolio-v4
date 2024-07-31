@@ -85,7 +85,7 @@ export function OrbitingCircleContainer() {
   ];
   return (
     <div className="relative min-h-[800px] overflow-hidden">
-      <BlurFade blur={"2px"} duration={1.5} delay={1.5}>
+      <BlurFade blur={"2px"} duration={0.5} delay={0.9}>
         <div className="relative min-h-[800px]   flex w-full flex-col items-center justify-center overflow-hidden ">
           <img
             src={bitmoji2}

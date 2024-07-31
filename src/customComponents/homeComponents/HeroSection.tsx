@@ -5,12 +5,12 @@ import { OrbitingCircleContainer } from "./OrbitingCircleContainer";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[100dvh] relative bg-transparent">
+    <section className="min-h-[100dvh] relative bg-transparent pt-10 md:pt-16">
       <BlurFade blur={"2px"} duration={1}>
         {/* Text Content */}
-        <div className="pt-0 px-10 relative z-10 text-foreground/85 w-full max-w-[80rem] mx-auto mt-10 md:mt-16">
+        <div className="pt-0 px-10 relative z-10 text-foreground/85 w-full max-w-[80rem] mx-auto">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter  md:text-center">
-            Hi, I'm Vivek{" "}
+            Hi, I'm <span className="gradient-text font-pacifico">Vivek</span>{" "}
             <span className="animate-handshake inline-block">👋</span>
           </h1>
 

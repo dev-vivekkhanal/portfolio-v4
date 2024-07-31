@@ -78,7 +78,12 @@ const DockMenu = () => {
             <DockIcon key={item.label} className="hidden sm:block mx-3">
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <a href={item.href} target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block"
+                  >
                     <Button
                       variant="ghost"
                       className="rounded-full size-14 hover:bg-foreground/20"

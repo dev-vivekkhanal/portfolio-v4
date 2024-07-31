@@ -146,7 +146,7 @@ const ProjectSection = () => {
       >
         <section
           id="projects"
-          className="min-h-screen p-10 py-32 max-w-[80rem] mx-auto"
+          className="min-h-screen p-10 py-32 max-w-[90rem] mx-auto"
         >
           <h2 className="text-3xl sm:text-4xl font-bold mb-10  z-10">
             Projects
@@ -168,7 +168,7 @@ const ProjectSection = () => {
                     <img
                       src={card.cover}
                       alt={card.name}
-                      className={`h-72 w-full  overflow-hidden group relative object-cover object-top group-hover:scale-105 transition-all duration-500 rounded-xl`}
+                      className={`h-96 w-full  overflow-hidden group relative object-cover object-top group-hover:scale-105 transition-all duration-500 rounded-xl`}
                     />
                     <div className="project-card-bg absolute inset-0 p-5 border flex flex-col justify-end">
                       <motion.h3
