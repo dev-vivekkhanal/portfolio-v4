@@ -10,7 +10,7 @@ import Footer from "@/customComponents/globalComponents/Footer";
 
 const HomePage = () => {
   return (
-    <div className="dark:bg-image-dark dark:sm:bg-none sm:bg-fixed">
+    <div className="dark:bg-star-less-dark bg-fixed">
       <HeroSection />
       <ProjectSection />
       <SkillSection />

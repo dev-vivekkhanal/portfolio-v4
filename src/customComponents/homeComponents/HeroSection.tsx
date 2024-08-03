@@ -16,10 +16,9 @@ import bitmoji2 from "../../assets/bitmoji2.png";
 
 const HeroSection = () => {
   return (
-    <section className="min-h-[120vh] relative bg-transparent overflow-hidden">
+    <section className=" relative bg-transparent overflow-hidden">
       {/* Text Content */}
       <div className="absolute top-0 left-0 right-0 pt-10 md:pt-16">
-        {" "}
         <div className="pt-0 px-10 relative z-10 text-foreground/85 w-full max-w-[80rem] mx-auto">
           <h1 className="text-2xl md:text-3xl lg:text-4xl font-bold tracking-tighter  md:text-center">
             Hi, I'm <span className="gradient-text font-pacifico">Vivek</span>{" "}
@@ -61,7 +60,7 @@ const HeroSection = () => {
         </div>
       </div>
       {/* <OrbitingCircleContainer /> */}
-      <div className="flex flex-col w-full h-[120dvh] items-center justify-center overflow-hidden ">
+      <div className="flex flex-col w-full min-h-[120vh] xl:min-h-[80rem] items-center justify-center overflow-hidden ">
         <img
           src={bitmoji2}
           alt="Vivek's bitmoji"
