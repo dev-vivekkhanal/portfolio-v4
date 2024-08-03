@@ -17,7 +17,9 @@ const HomePage = () => {
       <WorkExperience />
       <EducationSection />
       <TextRevealByWord text="Got a project in mind?💡" />
-      <TextRevealByWord text="Don&#39;t be shy, say Hi!👋 Let's bring your ideas to life." />
+      {/* <TextRevealByWord text="Don&#39;t be shy, say Hi!👋" /> */}
+
+      {/* <TextRevealByWord text="Don&#39;t be shy, say Hi!👋 Let's bring your ideas to life." /> */}
       <ContactSection />
       <Footer />
     </div>

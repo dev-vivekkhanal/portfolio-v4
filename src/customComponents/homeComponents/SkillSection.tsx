@@ -213,7 +213,7 @@ const SkillSection = () => {
   ];
 
   return (
-    <section id="skills" className="p-10 py-32 max-w-[80rem] mx-auto">
+    <section id="skills" className="p-10 pt-5 pb-32 max-w-[80rem] mx-auto">
       <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10">
         Technical Skills
       </h2>

@@ -125,11 +125,11 @@ module.exports = {
           "0%": {
             opacity: "0",
           },
-          "50%": {
+          "40%": {
             opacity: "0",
           },
           "100%": {
-            opacity: "20%",
+            opacity: "100%",
           },
         },
         handshake: {
@@ -151,7 +151,7 @@ module.exports = {
         ripple:
           "ripple var(--duration, 1s) ease calc(var(--i, 0) * .1s) 1 forwards",
         "pop-in": "popIn 1.5s ease-in-out forwards",
-        "fade-in": "fadeIn 6s ease-out forwards",
+        "fade-in": "fadeIn 1.5s ease-out forwards",
         handshake: "handshake 1s ease-out 0.8s",
       },
     },
