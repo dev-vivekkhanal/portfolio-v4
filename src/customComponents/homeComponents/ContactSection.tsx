@@ -28,9 +28,9 @@ const ContactSection = () => {
       id="contact"
       className="px-10 pb-96 max-w-[80rem] min-h-fit  mx-auto  bg-transparent relative z-10 "
     >
-      <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10 ">
-        Don&#39;t be shy, say Hi!👋
-      </h2>
+      <p className=" text-foreground/70 text-2xl text-center pb-32">
+        Got a project in mind? <br /> Don&#39;t be shy, say Hi
+      </p>
       <div className="flex flex-wrap gap-10 justify-between items-center">
         <div className="w-[120px] md:flex-1 md:max-w-[220px]">
           <a

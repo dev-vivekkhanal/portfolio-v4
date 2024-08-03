@@ -28,6 +28,12 @@ import typescript from "../../assets/typescript.png";
 import tanstack from "../../assets/tanstack.png";
 import vercel from "../../assets/vercel.svg";
 import amazon from "../../assets/amazon.jpeg";
+import mui from "../../assets/mui.png";
+import dart from "../../assets/dart.png";
+import jest from "../../assets/jest.png";
+import enzyme from "../../assets/enzyme.png";
+import jasmine from "../../assets/jasmine.png";
+import karma from "../../assets/karma.png";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -57,6 +63,7 @@ const SkillSection = () => {
   const skill6Ref = useRef<HTMLDivElement>(null);
   const skill7Ref = useRef<HTMLDivElement>(null);
   const skill8Ref = useRef<HTMLDivElement>(null);
+  const skill9Ref = useRef<HTMLDivElement>(null);
 
   const skillData = [
     {
@@ -136,6 +143,10 @@ const SkillSection = () => {
           name: "Meridian",
           logo: amazon,
         },
+        {
+          name: "Material UI",
+          logo: mui,
+        },
       ],
     },
 
@@ -158,6 +169,10 @@ const SkillSection = () => {
         {
           name: "C/C++",
           logo: cpp,
+        },
+        {
+          name: "Dart",
+          logo: dart,
         },
       ],
     },
@@ -195,10 +210,32 @@ const SkillSection = () => {
         },
       ],
     },
+    {
+      title: "Testing",
+      ref: skill8Ref,
+      skills: [
+        {
+          name: "Jest",
+          logo: jest,
+        },
+        {
+          name: "Enzyme",
+          logo: enzyme,
+        },
+        {
+          name: "Jasmine",
+          logo: jasmine,
+        },
+        {
+          name: "Karma",
+          logo: karma,
+        },
+      ],
+    },
 
     {
       title: "Others",
-      ref: skill8Ref,
+      ref: skill9Ref,
       skills: [
         {
           name: "Firebase",

@@ -8,6 +8,7 @@ import mag from "../../assets/mag-full.webp";
 import taswin from "../../assets/taswin-full.webp";
 import sriakriti from "../../assets/srikakriti-full.webp";
 import colorPalette from "../../assets/color-palette.png";
+import { HashLink } from "react-router-hash-link";
 // import languageSquire from "../../assets/language-squire-full.png";
 
 const ProjectSection = () => {
@@ -140,7 +141,7 @@ const ProjectSection = () => {
 
       <section
         id="projects"
-        className="min-h-screen pt-5 px-10 pb-32 max-w-[90rem] mx-auto"
+        className=" pt-5 px-10 pb-32 max-w-[90rem] mx-auto animate-fade-in"
       >
         <h2 className="text-3xl sm:text-4xl font-bold mb-16  z-10">Projects</h2>
         <ul className=" mx-auto w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 items-start gap-4">
@@ -182,16 +183,11 @@ const ProjectSection = () => {
           ))}
         </ul>
         <p className=" text-foreground/70 text-2xl text-center pt-32">
-          Still intrigued? <br /> Connect with me on{" "}
-          <a
-            href="https://www.linkedin.com/in/vivek-khanal/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="gradient-text font-bold"
-          >
-            LinkedIn
-          </a>{" "}
-          to uncover more projects!
+          Still intrigued? <br />{" "}
+          <HashLink smooth to="/#contact" className="gradient-text font-bold">
+            Connect
+          </HashLink>{" "}
+          with me to uncover more projects!
         </p>
       </section>
     </>
