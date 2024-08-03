@@ -1,4 +1,3 @@
-import BlurFade from "./components/magicui/blur-fade";
 import Particles from "./components/magicui/particles";
 import { Toaster } from "./components/ui/toaster";
 import DockMenu from "./customComponents/globalComponents/DockMenu";
