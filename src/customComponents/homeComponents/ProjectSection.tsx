@@ -1,4 +1,3 @@
-import BlurFade from "@/components/magicui/blur-fade";
 import { useOutsideClick } from "@/hooks/use-outside-click";
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -137,60 +136,51 @@ const ProjectSection = () => {
       </AnimatePresence>
 
       {/* grid */}
-      <BlurFade
-        blur={"1px"}
-        duration={1}
-        delay={0.3}
-        inView
-        inViewMargin="-100px"
+
+      <section
+        id="projects"
+        className="min-h-screen p-10 py-32 max-w-[90rem] mx-auto"
       >
-        <section
-          id="projects"
-          className="min-h-screen p-10 py-32 max-w-[90rem] mx-auto"
-        >
-          <h2 className="text-3xl sm:text-4xl font-bold mb-16  z-10">
-            Projects
-          </h2>
-          <ul className=" mx-auto w-full grid grid-cols-1 sm:grid-cols-2 items-start gap-4">
-            {projectData.map((card) => (
-              <motion.div
-                layoutId={`card-${card.name}-${id}`}
-                key={card.name}
-                onClick={() => setActive(card)}
-                className=" border-2 border-accent-foreground/10 flex flex-col bg-neutral-950  rounded-xl cursor-pointer overflow-hidden group
+        <h2 className="text-3xl sm:text-4xl font-bold mb-16  z-10">Projects</h2>
+        <ul className=" mx-auto w-full grid grid-cols-1 sm:grid-cols-2 items-start gap-4">
+          {projectData.map((card) => (
+            <motion.div
+              layoutId={`card-${card.name}-${id}`}
+              key={card.name}
+              onClick={() => setActive(card)}
+              className=" border-2 border-accent-foreground/10 flex flex-col bg-neutral-950  rounded-xl cursor-pointer overflow-hidden group
                 "
-              >
-                <div className="w-full">
-                  <motion.div
-                    layoutId={`image-${card.name}-${id}`}
-                    className="relative"
-                  >
-                    <img
-                      src={card.cover}
-                      alt={card.name}
-                      className={`h-96 w-full  overflow-hidden group relative object-cover object-top group-hover:scale-105 transition-all duration-500 rounded-xl`}
-                    />
-                    <div className="project-card-bg absolute inset-0 p-5 border flex flex-col justify-end">
-                      <motion.h3
-                        layoutId={`name-${card.name}-${id}`}
-                        className="font-medium text-neutral-200 text-xl uppercase mb-2 "
-                      >
-                        {card.name}
-                      </motion.h3>
-                      <motion.p
-                        layoutId={`description-${card.name}-${id}`}
-                        className="text-neutral-400 text-sm "
-                      >
-                        {card.stackUsed.toString()}
-                      </motion.p>
-                    </div>
-                  </motion.div>
-                </div>
-              </motion.div>
-            ))}
-          </ul>
-        </section>
-      </BlurFade>
+            >
+              <div className="w-full">
+                <motion.div
+                  layoutId={`image-${card.name}-${id}`}
+                  className="relative"
+                >
+                  <img
+                    src={card.cover}
+                    alt={card.name}
+                    className={`h-96 w-full  overflow-hidden group relative object-cover object-top group-hover:scale-105 transition-all duration-500 rounded-xl`}
+                  />
+                  <div className="project-card-bg absolute inset-0 p-5 border flex flex-col justify-end">
+                    <motion.h3
+                      layoutId={`name-${card.name}-${id}`}
+                      className="font-medium text-neutral-200 text-xl uppercase mb-2 "
+                    >
+                      {card.name}
+                    </motion.h3>
+                    <motion.p
+                      layoutId={`description-${card.name}-${id}`}
+                      className="text-neutral-400 text-sm "
+                    >
+                      {card.stackUsed.toString()}
+                    </motion.p>
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </ul>
+      </section>
     </>
   );
 };

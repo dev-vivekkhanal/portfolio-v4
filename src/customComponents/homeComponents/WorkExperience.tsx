@@ -3,7 +3,6 @@ import eko from "../../assets/eko.jpeg";
 import internForte from "../../assets/intrnForte.jpeg";
 import cureskin from "../../assets/cureskin.jpeg";
 import amazon from "../../assets/amazon.jpeg";
-import BlurFade from "../../components/magicui/blur-fade";
 
 import stmarys from "../../assets/stmarys.jpeg";
 import svjc from "../../assets/svjc.png";
@@ -77,67 +76,38 @@ const WorkExperience = () => {
         : `${months} months`;
 
   return (
-    <>
-      <BlurFade
-        blur={"1px"}
-        duration={1}
-        delay={0.3}
-        inView
-        inViewMargin="-100px"
-      >
-        <section
-          id="experience"
-          className="p-10 py-32 max-w-[80rem] mx-auto  bg-transparent relative z-10"
-        >
-          <div className="">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10">
-              Work Experience
-            </h2>
-          </div>
+    <section
+      id="experience"
+      className="p-10 py-32 max-w-[80rem] mx-auto  bg-transparent relative z-10"
+    >
+      <div className="">
+        <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10">
+          Work Experience
+        </h2>
+      </div>
 
-          <div className="my-5">
-            {experienceData?.reverse()?.map((data, idx) => {
-              return (
-                <div key={data?.id} className="mb-10 ">
-                  <div className="flex justify-between items-start gap-10 ">
-                    <div className="flex gap-5 items-center">
-                      {/* image */}
-                      <div className="flex justify-center items-center aspect-square w-16 rounded-full overflow-hidden bg-foreground">
-                        <img
-                          src={data?.companyLogo}
-                          alt={data?.companyName}
-                          className=""
-                        />
-                      </div>
-                      {/* company and designation */}
-                      <div>
-                        <h3 className="font-bold text-lg sm:text-xl leading-relaxed tracking-wide">
-                          {data?.companyName}
-                        </h3>
-                        <p>{data?.designation}</p>
-                        <p className="text-foreground/50">{data?.workMode}</p>
-                        <div className="sm:hidden">
-                          <p className="text-foreground/50 flex gap-1">
-                            <span>{data?.startDate}</span>
-                            {data?.endDate && <span>-</span>}
-                            <span
-                              className={` ${
-                                data?.endDate === "Present"
-                                  ? "text-green-700 dark:text-green-300 font-semibold tracking-wider"
-                                  : ""
-                              } `}
-                            >
-                              {data?.endDate}
-                            </span>
-                          </p>
-                          <p className="capitalize">
-                            {idx === 0 ? result : data?.duration}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="min-w-40 hidden sm:block">
+      <div className="my-5">
+        {experienceData?.reverse()?.map((data, idx) => {
+          return (
+            <div key={data?.id} className="mb-10 ">
+              <div className="flex justify-between items-start gap-10 ">
+                <div className="flex gap-5 items-center">
+                  {/* image */}
+                  <div className="flex justify-center items-center aspect-square w-16 rounded-full overflow-hidden bg-foreground">
+                    <img
+                      src={data?.companyLogo}
+                      alt={data?.companyName}
+                      className=""
+                    />
+                  </div>
+                  {/* company and designation */}
+                  <div>
+                    <h3 className="font-bold text-lg sm:text-xl leading-relaxed tracking-wide">
+                      {data?.companyName}
+                    </h3>
+                    <p>{data?.designation}</p>
+                    <p className="text-foreground/50">{data?.workMode}</p>
+                    <div className="sm:hidden">
                       <p className="text-foreground/50 flex gap-1">
                         <span>{data?.startDate}</span>
                         {data?.endDate && <span>-</span>}
@@ -156,46 +126,57 @@ const WorkExperience = () => {
                       </p>
                     </div>
                   </div>
-                  {data?.children?.length && (
-                    <div>
-                      {data?.children?.map((childData) => {
-                        return (
-                          <div key={childData?.id} className="flex">
-                            <div className="flex  w-16">
-                              <div className="flex-1"></div>
-                              <div className="border-l-2 border-b-2 h-20 border-foreground/20 flex-1"></div>
+                </div>
+
+                <div className="min-w-40 hidden sm:block">
+                  <p className="text-foreground/50 flex gap-1">
+                    <span>{data?.startDate}</span>
+                    {data?.endDate && <span>-</span>}
+                    <span
+                      className={` ${
+                        data?.endDate === "Present"
+                          ? "text-green-700 dark:text-green-300 font-semibold tracking-wider"
+                          : ""
+                      } `}
+                    >
+                      {data?.endDate}
+                    </span>
+                  </p>
+                  <p className="capitalize">
+                    {idx === 0 ? result : data?.duration}
+                  </p>
+                </div>
+              </div>
+              {data?.children?.length && (
+                <div>
+                  {data?.children?.map((childData) => {
+                    return (
+                      <div key={childData?.id} className="flex">
+                        <div className="flex  w-16">
+                          <div className="flex-1"></div>
+                          <div className="border-l-2 border-b-2 h-20 border-foreground/20 flex-1"></div>
+                        </div>
+
+                        <div className="flex justify-between items-start gap-10 w-full pt-10 pl-1">
+                          <div className="flex gap-5 items-center">
+                            {/* image */}
+                            <div className="flex justify-center items-center aspect-square w-16 rounded-full overflow-hidden">
+                              <img
+                                src={childData?.companyLogo}
+                                alt={childData?.companyName}
+                              />
                             </div>
+                            {/* company and designation */}
+                            <div>
+                              <h3 className="font-bold text-lg sm:text-xl leading-relaxed tracking-wide">
+                                {childData?.companyName}
+                              </h3>
+                              <p>{childData?.designation}</p>
+                              <p className="text-foreground/50">
+                                {childData?.workMode}
+                              </p>
 
-                            <div className="flex justify-between items-start gap-10 w-full pt-10 pl-1">
-                              <div className="flex gap-5 items-center">
-                                {/* image */}
-                                <div className="flex justify-center items-center aspect-square w-16 rounded-full overflow-hidden">
-                                  <img
-                                    src={childData?.companyLogo}
-                                    alt={childData?.companyName}
-                                  />
-                                </div>
-                                {/* company and designation */}
-                                <div>
-                                  <h3 className="font-bold text-lg sm:text-xl leading-relaxed tracking-wide">
-                                    {childData?.companyName}
-                                  </h3>
-                                  <p>{childData?.designation}</p>
-                                  <p className="text-foreground/50">
-                                    {childData?.workMode}
-                                  </p>
-
-                                  <div className="sm:hidden">
-                                    <p className="text-foreground/50">
-                                      {childData?.startDate} -{" "}
-                                      {childData?.endDate}
-                                    </p>
-                                    <p>{childData?.duration}</p>
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="min-w-40 hidden sm:block">
+                              <div className="sm:hidden">
                                 <p className="text-foreground/50">
                                   {childData?.startDate} - {childData?.endDate}
                                 </p>
@@ -203,17 +184,24 @@ const WorkExperience = () => {
                               </div>
                             </div>
                           </div>
-                        );
-                      })}
-                    </div>
-                  )}
+
+                          <div className="min-w-40 hidden sm:block">
+                            <p className="text-foreground/50">
+                              {childData?.startDate} - {childData?.endDate}
+                            </p>
+                            <p>{childData?.duration}</p>
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
-              );
-            })}
-          </div>
-        </section>
-      </BlurFade>
-    </>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 };
 
@@ -250,70 +238,62 @@ export const EducationSection = () => {
     },
   ];
   return (
-    <BlurFade
-      blur={"1px"}
-      duration={1}
-      delay={0.3}
-      inView
-      inViewMargin="-100px"
+    <section
+      id="education"
+      className="p-10 py-32 max-w-[80rem] mx-auto  bg-transparent relative z-10"
     >
-      <section
-        id="education"
-        className="p-10 py-32 max-w-[80rem] mx-auto  bg-transparent relative z-10"
-      >
-        <div className="">
-          <img
-            src={graduate}
-            alt="Vivek's graduat btmoji"
-            className="w-32 translate-y-4"
-          />
-          <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10">
-            Education
-          </h2>
-        </div>
+      <div className="">
+        <img
+          src={graduate}
+          alt="Vivek's graduat bitmoji"
+          className="w-32 translate-y-4"
+        />
+        <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10">
+          Education
+        </h2>
+      </div>
 
-        <div className="my-5">
-          {educationData?.reverse()?.map((data) => {
-            return (
-              <div key={data?.id} className="mb-10 ">
-                <div className="flex justify-between items-start gap-10 ">
-                  <div className="flex gap-5 items-center">
-                    {/* image */}
-                    <div className="flex justify-center items-center aspect-square w-16 rounded-full overflow-hidden bg-foreground">
-                      <img
-                        src={data?.companyLogo}
-                        alt={data?.institutionName}
-                        className=""
-                      />
-                    </div>
-                    {/* institution and standard */}
-                    <div>
-                      <h3 className="font-bold text-lg sm:text-xl leading-relaxed tracking-wide">
-                        {data?.institutionName}
-                      </h3>
-                      <p>{data?.standard}</p>
-                      <p className="text-foreground/50">{data?.workMode}</p>
-                      <div className="sm:hidden">
-                        <p className="text-foreground/50 flex gap-1">
-                          <span>{data?.batch}</span>
-                        </p>
-                        <p className="capitalize">{data?.duration}</p>
-                      </div>
-                    </div>
+      <div className="my-5">
+        {educationData?.reverse()?.map((data) => {
+          return (
+            <div key={data?.id} className="mb-10 ">
+              <div className="flex justify-between items-start gap-10 ">
+                <div className="flex gap-5 items-center">
+                  {/* image */}
+                  <div className="flex justify-center items-center aspect-square w-16 rounded-full overflow-hidden bg-foreground">
+                    <img
+                      src={data?.companyLogo}
+                      alt={data?.institutionName}
+                      className=""
+                    />
                   </div>
-
-                  <div className="min-w-40 hidden sm:block">
-                    <p className="text-foreground/50 flex gap-1">
-                      <span>{data?.batch}</span>
-                    </p>
-                    <p className="capitalize">{data?.duration}</p>
+                  {/* institution and standard */}
+                  <div>
+                    <h3 className="font-bold text-lg sm:text-xl leading-relaxed tracking-wide">
+                      {data?.institutionName}
+                    </h3>
+                    <p>{data?.standard}</p>
+                    <p className="text-foreground/50">{data?.workMode}</p>
+                    <div className="sm:hidden">
+                      <p className="text-foreground/50 flex gap-1">
+                        <span>{data?.batch}</span>
+                      </p>
+                      <p className="capitalize">{data?.duration}</p>
+                    </div>
                   </div>
                 </div>
+
+                <div className="min-w-40 hidden sm:block">
+                  <p className="text-foreground/50 flex gap-1">
+                    <span>{data?.batch}</span>
+                  </p>
+                  <p className="capitalize">{data?.duration}</p>
+                </div>
               </div>
-            );
-          })}
-        </div>
-      </section>
-    </BlurFade>
+            </div>
+          );
+        })}
+      </div>
+    </section>
   );
 };

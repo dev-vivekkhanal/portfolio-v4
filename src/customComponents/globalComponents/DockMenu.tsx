@@ -50,7 +50,10 @@ const DockMenu = () => {
   return (
     <div className="relative w-fit mx-auto">
       <TooltipProvider>
-        <Dock direction="middle" className="bg-foreground/25">
+        <Dock
+          direction="middle"
+          className="bg-foreground/70 md:bg-foreground/25"
+        >
           {DATA.navbar.map((item) => (
             <DockIcon key={item.label} className="mx-3">
               <Tooltip>
@@ -60,7 +63,7 @@ const DockMenu = () => {
                       variant="ghost"
                       className="rounded-full size-14 hover:bg-foreground/20"
                     >
-                      <item.icon className="size-8" />
+                      <item.icon className="size-8 stroke-background md:stroke-current" />
                     </Button>
                   </HashLink>
                 </TooltipTrigger>
@@ -88,7 +91,7 @@ const DockMenu = () => {
                       variant="ghost"
                       className="rounded-full size-14 hover:bg-foreground/20"
                     >
-                      <item.icon className="size-8" />
+                      <item.icon className="size-8 stroke-background md:stroke-current" />
                     </Button>
                   </a>
                 </TooltipTrigger>
@@ -107,7 +110,7 @@ const DockMenu = () => {
               <TooltipTrigger asChild>
                 <Button
                   variant="ghost"
-                  className="rounded-full size-12  hover:bg-foreground/20"
+                  className="rounded-full size-12  hover:bg-foreground/20 stroke-background md:stroke-current"
                 >
                   <ThemeToggle />
                 </Button>

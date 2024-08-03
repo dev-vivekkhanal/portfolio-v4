@@ -149,7 +149,7 @@ module.exports = {
         "border-beam": "border-beam calc(var(--duration)*1s) infinite linear",
         ripple:
           "ripple var(--duration, 1s) ease calc(var(--i, 0) * .1s) 1 forwards",
-        "pop-in": "popIn 0.8s ease-in-out 0.5s forwards",
+        "pop-in": "popIn 1.5s ease-in-out forwards",
         "fade-in": "fadeIn 6s ease-out forwards",
         handshake: "handshake 1s ease-out 0.8s",
       },

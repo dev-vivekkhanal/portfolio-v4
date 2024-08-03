@@ -28,7 +28,6 @@ import typescript from "../../assets/typescript.png";
 import tanstack from "../../assets/tanstack.png";
 import vercel from "../../assets/vercel.svg";
 import amazon from "../../assets/amazon.jpeg";
-import BlurFade from "@/components/magicui/blur-fade";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -214,151 +213,143 @@ const SkillSection = () => {
   ];
 
   return (
-    <BlurFade
-      blur={"1px"}
-      duration={1}
-      delay={0.3}
-      inView
-      inViewMargin="-100px"
-    >
-      <section id="skills" className="p-10 py-32 max-w-[80rem] mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10">
-          Technical Skills
-        </h2>
+    <section id="skills" className="p-10 py-32 max-w-[80rem] mx-auto">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-16 relative z-10">
+        Technical Skills
+      </h2>
 
-        <div className="relative " ref={containerRef}>
-          <div className="flex h-full w-full flex-col items-stretch justify-between gap-10">
-            <div className="flex flex-row justify-between items-start relative z-10 flex-wrap md:flex-nowrap">
-              {/* row 1 */}
-              <div>
-                {skillData?.map((skillGroup, idx) => {
-                  if (idx < 4) {
-                    return (
-                      <div
-                        key={idx}
-                        ref={skillGroup?.ref}
-                        className="relative bg-background/50 z-10 rounded-2xl mb-8"
-                      >
-                        <h3 className="mb-2 tracking-wider text-foreground/50">
-                          {skillGroup?.title}
-                        </h3>
-                        <div className="flex gap-5 items-center md:max-w-[18rem] flex-wrap justify-start">
-                          {skillGroup?.skills?.map((skill, skillIdx) => {
-                            return (
-                              <div
-                                key={skillIdx}
-                                className="flex flex-col justify-center items-center gap-1  min-w-[4rem]"
-                              >
-                                <Circle className="p-1">
-                                  {skill?.logo ? (
-                                    <div className="rounded-full overflow-hidden flex justify-center items-center w-[5rem]">
-                                      <img
-                                        src={skill?.logo}
-                                        alt={skill.name}
-                                        className="w-full"
-                                      />
-                                    </div>
-                                  ) : (
-                                    <Icons.openai />
-                                  )}
-                                </Circle>
-                                <span className="text-sm text-foreground/40">
-                                  {skill?.name}
-                                </span>
-                              </div>
-                            );
-                          })}
-                        </div>
+      <div className="relative " ref={containerRef}>
+        <div className="flex h-full w-full flex-col items-stretch justify-between gap-10">
+          <div className="flex flex-row justify-between items-start relative z-10 flex-wrap md:flex-nowrap">
+            {/* row 1 */}
+            <div>
+              {skillData?.map((skillGroup, idx) => {
+                if (idx < 4) {
+                  return (
+                    <div
+                      key={idx}
+                      ref={skillGroup?.ref}
+                      className="relative bg-background/50 z-10 rounded-2xl mb-8"
+                    >
+                      <h3 className="mb-2 tracking-wider text-foreground/50">
+                        {skillGroup?.title}
+                      </h3>
+                      <div className="flex gap-5 items-center md:max-w-[18rem] flex-wrap justify-start">
+                        {skillGroup?.skills?.map((skill, skillIdx) => {
+                          return (
+                            <div
+                              key={skillIdx}
+                              className="flex flex-col justify-center items-center gap-1  min-w-[4rem]"
+                            >
+                              <Circle className="p-1">
+                                {skill?.logo ? (
+                                  <div className="rounded-full overflow-hidden flex justify-center items-center w-[5rem]">
+                                    <img
+                                      src={skill?.logo}
+                                      alt={skill.name}
+                                      className="w-full"
+                                    />
+                                  </div>
+                                ) : (
+                                  <Icons.openai />
+                                )}
+                              </Circle>
+                              <span className="text-sm text-foreground/40">
+                                {skill?.name}
+                              </span>
+                            </div>
+                          );
+                        })}
                       </div>
-                    );
-                  }
-                })}
-              </div>
-              {/* row 2 */}
-              <div className="hidden md:block self-center ">
-                <Circle ref={avatarRef} className="p-0 w-32 bg-foreground/80">
-                  <img src={bitmoji} alt="Vivek's Bitmoji" />
-                </Circle>
-              </div>
-              {/* row 3 */}
-              <div>
-                {skillData?.map((skillGroup, idx) => {
-                  if (idx > 3) {
-                    return (
-                      <div
-                        key={idx}
-                        ref={skillGroup?.ref}
-                        className="relative bg-background/50 z-10 rounded-2xl mb-8"
-                      >
-                        <h3 className="mb-2 tracking-wider text-foreground/50">
-                          {skillGroup?.title}
-                        </h3>
-                        <div className="flex gap-5 items-center md:max-w-[18rem] flex-wrap justify-start">
-                          {skillGroup?.skills?.map((skill, skillIdx) => {
-                            return (
-                              <div
-                                key={skillIdx}
-                                className="flex flex-col justify-center items-center gap-1  min-w-[5rem]"
-                              >
-                                <Circle className="p-1 ">
-                                  {skill?.logo ? (
-                                    <div className="rounded-full overflow-hidden flex justify-center items-center w-[5rem]">
-                                      <img
-                                        src={skill?.logo}
-                                        alt={skill.name}
-                                        className="w-full"
-                                      />
-                                    </div>
-                                  ) : (
-                                    <Icons.openai />
-                                  )}
-                                </Circle>
-                                <span className="text-sm text-foreground/40">
-                                  {skill?.name}
-                                </span>
-                              </div>
-                            );
-                          })}
-                        </div>
+                    </div>
+                  );
+                }
+              })}
+            </div>
+            {/* row 2 */}
+            <div className="hidden md:block self-center ">
+              <Circle ref={avatarRef} className="p-0 w-32 bg-foreground/80">
+                <img src={bitmoji} alt="Vivek's Bitmoji" />
+              </Circle>
+            </div>
+            {/* row 3 */}
+            <div>
+              {skillData?.map((skillGroup, idx) => {
+                if (idx > 3) {
+                  return (
+                    <div
+                      key={idx}
+                      ref={skillGroup?.ref}
+                      className="relative bg-background/50 z-10 rounded-2xl mb-8"
+                    >
+                      <h3 className="mb-2 tracking-wider text-foreground/50">
+                        {skillGroup?.title}
+                      </h3>
+                      <div className="flex gap-5 items-center md:max-w-[18rem] flex-wrap justify-start">
+                        {skillGroup?.skills?.map((skill, skillIdx) => {
+                          return (
+                            <div
+                              key={skillIdx}
+                              className="flex flex-col justify-center items-center gap-1  min-w-[5rem]"
+                            >
+                              <Circle className="p-1 ">
+                                {skill?.logo ? (
+                                  <div className="rounded-full overflow-hidden flex justify-center items-center w-[5rem]">
+                                    <img
+                                      src={skill?.logo}
+                                      alt={skill.name}
+                                      className="w-full"
+                                    />
+                                  </div>
+                                ) : (
+                                  <Icons.openai />
+                                )}
+                              </Circle>
+                              <span className="text-sm text-foreground/40">
+                                {skill?.name}
+                              </span>
+                            </div>
+                          );
+                        })}
                       </div>
-                    );
-                  }
-                })}
-              </div>
+                    </div>
+                  );
+                }
+              })}
             </div>
           </div>
-
-          {skillData?.map((skillGroup, idx) => {
-            if (idx < 4) {
-              return (
-                <AnimatedBeam
-                  key={idx}
-                  duration={5}
-                  containerRef={containerRef}
-                  fromRef={skillGroup?.ref}
-                  toRef={avatarRef}
-                  delay={idx * (Math.floor(Math.random() * 5) + 1)}
-                  className="hidden md:block"
-                />
-              );
-            } else {
-              return (
-                <AnimatedBeam
-                  key={idx}
-                  duration={5}
-                  containerRef={containerRef}
-                  fromRef={skillGroup?.ref}
-                  toRef={avatarRef}
-                  delay={idx * (Math.floor(Math.random() * 2) + 1)}
-                  reverse
-                  className="hidden md:block"
-                />
-              );
-            }
-          })}
         </div>
-      </section>
-    </BlurFade>
+
+        {skillData?.map((skillGroup, idx) => {
+          if (idx < 4) {
+            return (
+              <AnimatedBeam
+                key={idx}
+                duration={5}
+                containerRef={containerRef}
+                fromRef={skillGroup?.ref}
+                toRef={avatarRef}
+                delay={idx * (Math.floor(Math.random() * 5) + 1)}
+                className="hidden md:block"
+              />
+            );
+          } else {
+            return (
+              <AnimatedBeam
+                key={idx}
+                duration={5}
+                containerRef={containerRef}
+                fromRef={skillGroup?.ref}
+                toRef={avatarRef}
+                delay={idx * (Math.floor(Math.random() * 2) + 1)}
+                reverse
+                className="hidden md:block"
+              />
+            );
+          }
+        })}
+      </div>
+    </section>
   );
 };
 
