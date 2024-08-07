@@ -8,8 +8,9 @@ import mag from "../../assets/mag-full.webp";
 import taswin from "../../assets/taswin-full.webp";
 import sriakriti from "../../assets/srikakriti-full.webp";
 import colorPalette from "../../assets/color-palette.png";
+import smarthub from "../../assets/smarthub.webp";
 import { HashLink } from "react-router-hash-link";
-// import languageSquire from "../../assets/language-squire-full.png";
+import languageSquire from "../../assets/language-squire-full.png";
 
 const ProjectSection = () => {
   const [active, setActive] = useState<
@@ -231,6 +232,21 @@ export const CloseIcon = () => {
 
 const projectData = [
   {
+    name: "SmartHub - by Amazon",
+    link: "https://smartcommerce.amazon.in/smarthub",
+    stackUsed: [
+      " HTML ",
+      " CSS ",
+      " JavaScript ",
+      " Typescript",
+      " React JS ",
+      " MobX ",
+      " Meridian ",
+    ],
+    desc: "Collaborated closely with the client's team of developers while contributing to a multi-inventory management tool. This solution is utlized by over 60,000 sellers across 13 countries and is an integral part of one of the world's largest e-commerce platforms. My primary role involved optimizing frontend store logic across various components, and I employed MobX for robust state management. This collaborative experience provided insights into large-scale project dynamics and mission-critical tool delivery to a diverse user base.",
+    cover: smarthub,
+  },
+  {
     name: "Taswin Trading",
     link: "https://www.tashwintradingpvt.com/",
     stackUsed: [
@@ -321,18 +337,18 @@ const projectData = [
     cover: colorPalette,
   },
 
-  // {
-  //   name: "Language Squire",
-  //   link: "https://language-squire-v1.vercel.app/",
-  //   stackUsed: [
-  //     "HTML ",
-  //     " CSS ",
-  //     " JavaScript ",
-  //     " Tailwind CSS ",
-  //     " React JS ",
-  //     " Vercel ",
-  //   ],
-  //   desc: "Developed a comprehensive website for Language Squire, a company that offers specialized training in IELTS, interview preparation, business skills, and visa assistance, helping individuals achieve their language and career goals efficiently.",
-  //   cover: languageSquire,
-  // },
+  {
+    name: "Language Squire",
+    link: "https://language-squire-v1.vercel.app/",
+    stackUsed: [
+      "HTML ",
+      " CSS ",
+      " JavaScript ",
+      " Tailwind CSS ",
+      " React JS ",
+      " Vercel ",
+    ],
+    desc: "Developed a comprehensive website for Language Squire, a company that offers specialized training in IELTS, interview preparation, business skills, and visa assistance, helping individuals achieve their language and career goals efficiently.",
+    cover: languageSquire,
+  },
 ];
