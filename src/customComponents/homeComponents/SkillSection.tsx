@@ -279,7 +279,7 @@ const SkillSection = () => {
             {/* row 1 */}
             <div>
               {skillData?.map((skillGroup, idx) => {
-                if (idx < 4) {
+                if (idx < 5) {
                   return (
                     <div
                       key={idx}
@@ -330,7 +330,7 @@ const SkillSection = () => {
             {/* row 3 */}
             <div>
               {skillData?.map((skillGroup, idx) => {
-                if (idx > 3) {
+                if (idx > 4) {
                   return (
                     <div
                       key={idx}
@@ -376,7 +376,7 @@ const SkillSection = () => {
         </div>
 
         {skillData?.map((skillGroup, idx) => {
-          if (idx < 4) {
+          if (idx < 5) {
             return (
               <AnimatedBeam
                 key={idx}
