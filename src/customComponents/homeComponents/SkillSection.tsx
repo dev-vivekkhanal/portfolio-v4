@@ -34,6 +34,8 @@ import jest from "../../assets/jest.png";
 import enzyme from "../../assets/enzyme.png";
 import jasmine from "../../assets/jasmine.png";
 import karma from "../../assets/karma.png";
+import nodejs from "../../assets/nodejs.png";
+import django from "../../assets/django.svg";
 
 const Circle = forwardRef<
   HTMLDivElement,
@@ -64,6 +66,7 @@ const SkillSection = () => {
   const skill7Ref = useRef<HTMLDivElement>(null);
   const skill8Ref = useRef<HTMLDivElement>(null);
   const skill9Ref = useRef<HTMLDivElement>(null);
+  const skill10Ref = useRef<HTMLDivElement>(null);
 
   const skillData = [
     {
@@ -117,6 +120,10 @@ const SkillSection = () => {
           logo: angularjs,
         },
         {
+          name: "Django",
+          logo: django,
+        },
+        {
           name: "Flutter",
           logo: flutter,
         },
@@ -151,8 +158,23 @@ const SkillSection = () => {
     },
 
     {
-      title: "Programming Languages",
+      title: "Backend",
       ref: skill5Ref,
+      skills: [
+        {
+          name: "Node JS",
+          logo: nodejs,
+        },
+        {
+          name: "Firebase",
+          logo: firebase,
+        },
+      ],
+    },
+
+    {
+      title: "Programming Languages",
+      ref: skill6Ref,
       skills: [
         {
           name: "JavaScript",
@@ -179,7 +201,7 @@ const SkillSection = () => {
 
     {
       title: "Version Control",
-      ref: skill6Ref,
+      ref: skill7Ref,
       skills: [
         {
           name: "Git",
@@ -194,7 +216,7 @@ const SkillSection = () => {
 
     {
       title: "Hosting",
-      ref: skill7Ref,
+      ref: skill8Ref,
       skills: [
         {
           name: "Vercel",
@@ -212,7 +234,7 @@ const SkillSection = () => {
     },
     {
       title: "Testing",
-      ref: skill8Ref,
+      ref: skill9Ref,
       skills: [
         {
           name: "Jest",
@@ -235,12 +257,8 @@ const SkillSection = () => {
 
     {
       title: "Others",
-      ref: skill9Ref,
+      ref: skill10Ref,
       skills: [
-        {
-          name: "Firebase",
-          logo: firebase,
-        },
         {
           name: "Tanstack Query",
           logo: tanstack,
