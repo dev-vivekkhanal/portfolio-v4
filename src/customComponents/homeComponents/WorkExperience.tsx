@@ -71,8 +71,6 @@ const WorkExperience = () => {
     },
   ];
 
-  const totalYears = new Date().getFullYear() - 2021;
-
   const now = new Date(),
     start = new Date("2024-06-12"),
     years = now.getFullYear() - start.getFullYear(),
