@@ -3,6 +3,7 @@ import eko from "../../assets/eko.jpeg";
 import internForte from "../../assets/intrnForte.jpeg";
 import cureskin from "../../assets/cureskin.jpeg";
 import amazon from "../../assets/amazon.jpeg";
+import freelance from "../../assets/freelance.jpg";
 
 import stmarys from "../../assets/stmarys.jpeg";
 import svjc from "../../assets/svjc.png";
@@ -12,7 +13,6 @@ import graduate from "../../assets/graduate.png";
 const WorkExperience = () => {
   const experienceData = [
     {
-      id: 4,
       companyName: "CDAC",
       designation: "Engineering Trainee",
       startDate: "Jan 2021",
@@ -22,7 +22,15 @@ const WorkExperience = () => {
       companyLogo: cdac,
     },
     {
-      id: 5,
+      companyName: "Freelancer",
+      designation: "Frontend Developer",
+      startDate: "Aug 2021",
+      endDate: "Feb 2022",
+      duration: "7 Months",
+      workMode: "Remote",
+      companyLogo: freelance,
+    },
+    {
       companyName: "IntrnForte",
       designation: "Academic Tutor",
       startDate: "Oct 2022",
@@ -33,7 +41,6 @@ const WorkExperience = () => {
     },
 
     {
-      id: 6,
       companyName: "Eko Infomatics",
       designation: "React Developer",
       startDate: "Mar 2022",
@@ -43,7 +50,6 @@ const WorkExperience = () => {
       companyLogo: eko,
       children: [
         {
-          id: 61,
           companyName: "Amazon",
           designation: "SDE 1",
           startDate: "Jul 2023",
@@ -56,7 +62,6 @@ const WorkExperience = () => {
     },
 
     {
-      id: 7,
       companyName: "Cureskin",
       designation: "Frontend Engineer",
       startDate: "Jun 2024",
@@ -65,6 +70,8 @@ const WorkExperience = () => {
       companyLogo: cureskin,
     },
   ];
+
+  const totalYears = new Date().getFullYear() - 2021;
 
   const now = new Date(),
     start = new Date("2024-06-12"),
@@ -89,7 +96,7 @@ const WorkExperience = () => {
       <div className="my-5">
         {experienceData?.reverse()?.map((data, idx) => {
           return (
-            <div key={data?.id} className="mb-10 ">
+            <div key={idx} className="mb-10 ">
               <div className="flex justify-between items-start gap-10 ">
                 <div className="flex gap-5 items-center">
                   {/* image */}
@@ -149,9 +156,9 @@ const WorkExperience = () => {
               </div>
               {data?.children?.length && (
                 <div>
-                  {data?.children?.map((childData) => {
+                  {data?.children?.map((childData, childIdx) => {
                     return (
-                      <div key={childData?.id} className="flex">
+                      <div key={childIdx} className="flex">
                         <div className="flex  w-16">
                           <div className="flex-1"></div>
                           <div className="border-l-2 border-b-2 h-20 border-foreground/20 flex-1"></div>
