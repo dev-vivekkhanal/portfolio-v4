@@ -4,7 +4,7 @@ const ContactSection = () => {
   const { toast } = useToast();
 
   const handleCopyAndNotify = () => {
-    const email = "dev.vivekkhanal.com";
+    const email = "dev.vivekkhanal@gmail.com";
 
     navigator.clipboard
       .writeText(email)
